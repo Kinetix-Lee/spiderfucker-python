@@ -16,4 +16,4 @@ python3 main.py
 
 ## 许可
 
-使用 [Anti-996 License](https://github.com/kattgu7/Anti-996-License) [许可证](https://github.com/Kinetix-Lee/spiderfucker-python/blob/master/LICENSE)授权。
+使用 [Anti-996 License](https://github.com/kattgu7/Anti-996-License) 许可证[授权](https://github.com/Kinetix-Lee/spiderfucker-python/blob/master/LICENSE)。
