@@ -6,24 +6,19 @@ from utils.parse import Parse
 
 parse = Parse()
 
-fileSource = None
+rules = None
 
-try:
-  fileSource = open('../config/rules/source.txt', 'r')
-except FileNotFoundError:
-  raise
-
-fileRobotsAllowed = open('../output/robots-allowed.txt', 'w')
-fileRobotsBlocked = open('../output/robots-blocked.txt', 'w')
-fileRobots = open('../output/robots.txt', 'w')
-
-rules = parse.ParseFile(fileSource)
+with open('../config/rules/source.txt', 'r') as fileSource:
+  rules = parse.ParseFile(fileSource)
 
 resultSet = {
   'alloweds': parse.GenerateAlloweds(rules),
   'blockeds': parse.GenerateBlockeds(rules),
 }
 
-fileRobotsAllowed.write(resultSet['alloweds'])
-fileRobotsBlocked.write(resultSet['blockeds'])
-fileRobots.write(resultSet['alloweds'] + '\n' + resultSet['blockeds'])
+with open('../output/robots-allowed.txt', 'w') as fileRobotsAllowed:
+  fileRobotsAllowed.write(resultSet['alloweds'])
+with open('../output/robots-blocked.txt', 'w') as fileRobotsBlocked:
+  fileRobotsBlocked.write(resultSet['blockeds'])
+with open('../output/robots.txt', 'w') as fileRobots:
+  fileRobots.write(resultSet['alloweds'] + '\n' + resultSet['blockeds'])

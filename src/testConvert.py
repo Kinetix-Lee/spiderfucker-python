@@ -9,3 +9,6 @@ fileSource = open('../config/rules/source.txt', 'r')
 fileSource_output = open('../config/rules/source.json', 'w')
 
 convert.convert(fileSource, fileSource_output)
+
+fileSource.close()
+fileSource_output.close()
