@@ -63,13 +63,13 @@ class Parse:
   def GenerateAlloweds(self, rules):
     output = 'User-agent:'
     for spider in self.GetAlloweds(rules):
-      output += spider
+      output += spider + ','
     output = output[:-1] + '\nAllow:/'
     return output
 
   def GenerateBlockeds(self, rules):
     output = 'User-agent:'
     for spider in self.GetBlockeds(rules):
-      output += spider
+      output += spider + ','
     output = output[:-1] + '\nDisallow:/'
     return output
