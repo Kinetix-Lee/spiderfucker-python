@@ -8,8 +8,16 @@
 
 ## 使用
 
+### Windows
+
+```powershell
+python main.py
+```
+
+### Linux
+
 ```bash
-python3 main.py
+$ python3 main.py
 ```
 
 然后查看 `result` 文件夹。
