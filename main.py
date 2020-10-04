@@ -8,7 +8,7 @@ parse = Parse()
 
 rules = None
 
-with open('../config/rules/source.txt', 'r') as fileSource:
+with open('./config/rules/source.txt', 'r') as fileSource:
   rules = parse.ParseFile(fileSource)
 
 resultSet = {
@@ -16,9 +16,9 @@ resultSet = {
   'blockeds': parse.GenerateBlockeds(rules),
 }
 
-with open('../output/robots-allowed.txt', 'w') as fileRobotsAllowed:
+with open('./output/robots-allowed.txt', 'w') as fileRobotsAllowed:
   fileRobotsAllowed.write(resultSet['alloweds'])
-with open('../output/robots-blocked.txt', 'w') as fileRobotsBlocked:
+with open('./output/robots-blocked.txt', 'w') as fileRobotsBlocked:
   fileRobotsBlocked.write(resultSet['blockeds'])
-with open('../output/robots.txt', 'w') as fileRobots:
+with open('./output/robots.txt', 'w') as fileRobots:
   fileRobots.write(resultSet['alloweds'] + '\n' + resultSet['blockeds'])

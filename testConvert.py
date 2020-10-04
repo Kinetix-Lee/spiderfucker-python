@@ -5,8 +5,8 @@ from utils.convertToJson import ConvertToJson
 
 convert = ConvertToJson()
 
-fileSource = open('../config/rules/source.txt', 'r')
-fileSource_output = open('../config/rules/source.json', 'w')
+fileSource = open('./config/rules/source.txt', 'r')
+fileSource_output = open('./config/rules/source.json', 'w')
 
 convert.convert(fileSource, fileSource_output)
 
