@@ -9,7 +9,7 @@
 ## 使用
 
 ```bash
-python3 classify.py
+python3 main.py
 ```
 
 然后查看 `result` 文件夹。

@@ -11,7 +11,7 @@ It is used to allow & block spiders according to specified rules.
 ## Usage
 
 ```bash
-python3 classify.py
+python3 main.py
 ```
 
 Then check out folder `result`. 
